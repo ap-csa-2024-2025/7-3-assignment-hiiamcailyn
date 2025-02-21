@@ -27,18 +27,20 @@ public class Main{  public static void main(String[] args) 
    arr.add(front);
   }
   public static void printStatics(ArrayList<Integer> arr) 
-  {    int count = 0;  
+  {   
+    int count = 0;  
    int sum = 0;   
    int mode = 0;   
    int average = 0; 
    for (int i = 0; i < dingteas.size(); i++) 
-     {      sum += i;     
+     {     
+       sum += i;     
       count ++; 
     }   
    System.out.println("Sum: " + sum);   
    average = sum/ count;   
-   System.out.println("This is the average amount of dingteas " + average); 
+   System.out.println("Average: " + average); 
    mode = sum % count;  
-   System.out.println("This is the mode of the aount of dingteas " + mode);
+   System.out.println("Mode: " + mode);
   }
     }
