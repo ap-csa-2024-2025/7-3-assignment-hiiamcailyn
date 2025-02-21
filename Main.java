@@ -29,7 +29,7 @@ public class Main{public static void main(String[] args)
  
  public static int printStatics(ArrayList<Integer> arr) 
  {
-   int count = 0;
+   //int count = 0;
    int sum = 0;
    int mode = 0;
    int average = 0; 
@@ -38,13 +38,18 @@ public class Main{public static void main(String[] args)
      {
       arr.get(i);
       sum += i;
-      count ++; 
+      //count ++; 
     }
    
-   average = sum/ count;
-   mode = sum % count;
-   return (sum + average + mode);
+   average = sum/ arr.size();
+   mode = sum % arr.size();
+    return (sum);
+   return (average);
+   return (mode);
   }
+  System.out.println(sum);
+  System.out.println(average);
+  System.out.println(mode);
 }
 
 
