@@ -12,12 +12,12 @@ public class Main{public static void main(String[] args)
   // System.out.println("the list shift left "+dingtea);
 // Part 2  
   ArrayList<Integer> dingteas = new ArrayList<Integer>();
-  dingtea.add(2);
-  dingtea.add(5);
-  dingtea.add(7);
-  dingtea.add(5);
+  dingteas.add(2);
+  dingteas.add(5);
+  dingteas.add(7);
+  dingteas.add(5);
  System.out.println("This is the list of boba teas" + dingteas);
-  System.out.println("This is the stats of boba teas" + printStatics(dingteas));
+  System.out.println("This is the stats of boba teas " + printStatics(dingteas));
  }
  public static void shiftLeft(ArrayList<String> arr)
   {
@@ -26,21 +26,25 @@ public class Main{public static void main(String[] args)
    // this will shift everthing to the left  
    arr.add(front);
  }
- public static void printStatics(ArrayList<Integer> arr) 
+ 
+ public static int printStatics(ArrayList<Integer> arr) 
  {
-    int count = 0;
+   int count = 0;
    int sum = 0;
    int mode = 0;
    int average = 0; 
-   for (int i = 0; i < dingteas.size(); i++) 
+
+   for (int i = 0; i < arr.size(); i++)
      {
-       sum += i;
+      arr.get(i);
+      sum += i;
       count ++; 
-}
-   System.out.println("Sum: " + sum);
-   average = sum/ count; 
-   System.out.println("Average: " + average);
-   mode = sum % count;
-   System.out.println("Mode: " + mode);
-  }
     }
+   
+   average = sum/ count;
+   mode = sum % count;
+   return (sum + average + mode);
+  }
+}
+
+
