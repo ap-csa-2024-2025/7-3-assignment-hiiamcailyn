@@ -29,27 +29,38 @@ public class Main{public static void main(String[] args)
  
  public static int printStatics(ArrayList<Integer> arr) 
  {
-   //int count = 0;
-   int sum = 0;
-   int mode = 0;
-   int average = 0; 
+  int sum = 0;
+        int mode = arr.get(0); // Initialize mode to the first element
+        int maxCount = 0;
 
-   for (int i = 0; i < arr.size(); i++)
-     {
-      arr.get(i);
-      sum += i;
-      //count ++; 
+        // Calculate sum and find mode
+        for (int i = 0; i < arr.size(); i++) {
+            int value = arr.get(i);
+            sum += value;
+
+            // Count occurrences of the current value
+            int count = 0;
+            for (int j = 0; j < arr.size(); j++) {
+                if (arr.get(j) == value) {
+                    count++;
+                }
+            }
+
+            // Check if the current value is the new mode
+            if (count > maxCount) {
+                maxCount = count;
+                mode = value;
+            }
+        }
+
+        // Calculate average
+        int average = sum / arr.size();
+
+        System.out.println("Sum: " + sum);
+        System.out.println("Average: " + average);
+        System.out.println("Mode: " + mode);
+
+        return sum; // Return sum or any other desired integer
     }
-   
-   average = sum/ arr.size();
-   mode = sum % arr.size();
-    return (sum);
-   return (average);
-   return (mode);
-  }
-  System.out.println(sum);
-  System.out.println(average);
-  System.out.println(mode);
-}
-
+ }
 
